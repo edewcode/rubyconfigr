@@ -1,6 +1,6 @@
 == Overview
 
-<b>rbyconfigr<b> is a simple, powerful one stop utility program providing simple API for the management
+*rbyconfigr* is a simple, powerful one stop utility program providing simple API for the management
 of application configuration. 
 
 This utlity is developed keeping developer convenience in mind. Configurations in ruby or RoR is mostly 
