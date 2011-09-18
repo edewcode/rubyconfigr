@@ -1,17 +1,17 @@
 == Overview
 
-*rbyconfigr* is a simple, powerful one stop utility program providing simple API for the management
+*rubyconfigr* is a simple and powerful one stop utility program providing simple API for the management
 of application configuration. 
 
-This utlity is developed keeping developer convenience in mind. Configurations in ruby or RoR is mostly 
-done in YAML format. Other language programmers are well aquainted with XML format and this helps them 
+This utlity is developed keeping developer's convenience in mind. Configurations in ruby or RoR are mostly 
+done in YAML format. Other language programmers are well aquainted with XML format and this utility helps them 
 to easily use without learning new configuration format. 
 
-It mainly has two features 
+It mainly has three features 
 
- a) Divides the related configuration into Categories
- b) Splits the huge list of configuraion into various files
- c) Variable interpolation usage
+ a) Divides the related configuration into categories, 
+ b) Splits the huge list of configuraion into various files and
+ c) Variable interpolation usage.
 
 Presently it supports only XML files to provide all the configurations. 
 
