@@ -1,0 +1,13 @@
+<config-mapper>
+
+
+  <global-variables>
+	 <variable name="env" value="dev"/>
+  </global-variables>
+
+
+  <config location="./test/jdbc-config.xml"/>
+  <config location="./test/general-config.xml"/>
+
+ 
+</config-mapper>

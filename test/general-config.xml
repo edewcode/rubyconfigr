@@ -1,0 +1,6 @@
+<config>
+
+	<property name="devloc" value="/home/${env}/files"/>
+	
+</config>
+

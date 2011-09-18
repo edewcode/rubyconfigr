@@ -1,0 +1,13 @@
+<config>
+
+	<category name="jdbc">
+		<property name="url" value="jdbc:mysql://localhost/test"/>
+		<property name="driver" value="com.jdbc.mysql.Driver"/>
+		<property name="password" value="pass"/>
+		<property name="user" value="user"/>
+	</category>
+	
+	<property name="user" value="root"/>	
+	
+</config>
+
