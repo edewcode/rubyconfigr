@@ -14,7 +14,7 @@ It mainly has two features
 
 Presently it supports only XML files to provide all the configurations. 
 
-For detailed information and usage please check link:https://github.com/edewcode/rubyconfigr/wiki/Usage-Guide 
+For detailed information and usage please check [https://github.com/edewcode/rubyconfigr/wiki/Usage-Guide]
 
 == Copyright
 
