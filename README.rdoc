@@ -11,6 +11,7 @@ It mainly has two features
 
  a) Divides the related configuration into Categories
  b) Splits the huge list of configuraion into various files
+ c) Variable interpolation usage
 
 Presently it supports only XML files to provide all the configurations. 
 
