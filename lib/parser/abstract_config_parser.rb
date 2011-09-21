@@ -17,7 +17,8 @@
 
 
 
-require 'error/parsererror';
+require 'error/parser_error';
+
 module Parser
   
   class AbstractConfigParser

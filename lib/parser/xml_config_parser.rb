@@ -18,9 +18,9 @@
 
 require 'rubygems';
 require 'nokogiri';
-require 'parser/abstractconfigparser';
+require 'parser/abstract_config_parser';
 require 'utils/checkutils';
-require 'error/parsererror';
+require 'error/parser_error';
 
 
 module Parser 

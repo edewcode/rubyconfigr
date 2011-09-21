@@ -19,8 +19,8 @@
 
 require 'rubygems'
 require 'nokogiri'
-require 'parser/abstractconfigmapperparser';
-require 'error/parsererror';
+require 'parser/abstract_config_mapper_parser';
+require 'error/parser_error';
 require 'utils/checkutils';
 require 'yaml';
 

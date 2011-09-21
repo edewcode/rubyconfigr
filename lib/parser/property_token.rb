@@ -12,29 +12,34 @@
 #   See the License for the specific language governing permissions and
 #   limitations under the License.
 
+
 # Author:  Kartik Narayana Maringanti
 # Contact: edewcode@gmail.com, mn.kartik@gmail.com
 
 
-require 'error/parsererror';
+module RubyConfigr
 
-module Parser
-  
-  class AbstractConfigMapperParser
+    #PropertyToken is responsible for holding property name=value pairs
+	class PropertyToken
      
-     attr_accessor :config_mapper_file, :data_handler;
+      # Holds the name of the property 
+	  attr_accessor :name;
      
-     def parse
-      if @config_mapper_file == nil 
-  	    raise RubyConfigr::ParserError , "config_mapper_file cannot be nil";
-  	  end
-  	  if @data_handler == nil 
-  	    raise RubyConfigr::ParserError , "data_handler cannot be nil";
-  	  end 	  
-     end 
-     
-     public :parse;
-  end 
-  
+      # Holds the property value 
+	  attr_accessor :value;
+
+	  # Holds whether the property is parsed or not 
+	  # 'true' - if property is parsed 
+	  # 'false' - if proprty is not parsed 
+	  attr_accessor :parsed;
+
+
+	  def initialize(name, value, parsed)  
+	  	@name = name;
+	  	@value = value;
+	  	@parsed = parsed;
+	  end 
+
+	end 
+
 end
-
