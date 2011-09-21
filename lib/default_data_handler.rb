@@ -18,7 +18,7 @@
 
 
 
-require 'variablereplacer';
+require 'variable_replacer';
 
 module RubyConfigr
   

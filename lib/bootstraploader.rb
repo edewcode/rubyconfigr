@@ -18,12 +18,12 @@
 
 
 require 'applogger';
-require 'defaultdatahandler';
+require 'default_data_handler';
 require 'configmanager';
-require 'error/LoadError';
-require 'parser/xmlconfigmapperparser';
-require 'parser/xmlconfigparser';
-require 'parser/parserfactory';
+require 'error/loaderror';
+require 'parser/xml_config_mapper_parser';
+require 'parser/xml_config_parser';
+require 'parser/parser_factory';
 require 'utils/fileutils';
 
 

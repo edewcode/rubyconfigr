@@ -17,7 +17,8 @@
 # Contact: edewcode@gmail.com, mn.kartik@gmail.com
 
 
-require 'error/parsererror';
+require 'error/parser_error';
+
 
 module RubyConfigr
 

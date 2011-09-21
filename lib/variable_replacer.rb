@@ -17,7 +17,7 @@
 # Contact: edewcode@gmail.com, mn.kartik@gmail.com
 
 
-require 'error/IncorrectVariableError.rb'; 
+require 'error/incorrect_variable_error.rb'; 
 
 
 module RubyConfigr
