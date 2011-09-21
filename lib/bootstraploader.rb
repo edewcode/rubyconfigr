@@ -23,6 +23,8 @@ require 'configmanager';
 require 'error/LoadError';
 require 'parser/xmlconfigmapperparser';
 require 'parser/xmlconfigparser';
+require 'parser/parserfactory';
+require 'utils/fileutils';
 
 
 module RubyConfigr 
@@ -41,42 +43,47 @@ module RubyConfigr
       @@logger ||= AppLogger.get_logger();	  
   	
       if ENV["mapper_path"].nil? 
-  	    @@logger.fatal("environment variable 'mapper_path' is not present"); 
+  	    @@logger.fatal("Environment variable 'mapper_path' is not present"); 
   	    raise LoadError , "Environment variable 'mapper_path' is not present";		  
   		elsif  ENV["mapper_path"].strip.eql?("") 
-  	    @@logger.fatal("environment variable 'mapper_path' is empty");    	  
+  	    @@logger.fatal("Environment variable 'mapper_path' is empty");    	  
   		  raise LoadError , "Environment variable 'mapper_path' is not present";
   		else  
   		  data_handler = RubyConfigr::DefaultDataHandler.new();
   		  
   		  cfgmgr = RubyConfigr::ConfigManager.instance.get;
   		  
-  		  # get the configuration mapper factory and parse the config mapper file 
-  		  config_mapper_parser = Parser::XmlConfigMapperParser.new(); 		  	
-  		  config_mapper_parser.config_mapper_file = File.absolute_path(ENV["mapper_path"]);
+        mapper_path = File.absolute_path(ENV["mapper_path"]);
+
+  		  # get the config-mapper parser 
+  		  config_mapper_parser = Parser::ParserFactory.get_configmapper_parser_instance(mapper_path);	  	
+  		  config_mapper_parser.config_mapper_file = mapper_path;
   		  config_mapper_parser.data_handler = data_handler;
   		  config_mapper_parser.parse();
   		  
+
   		  # parse each of the config file locations ( if any )
   		  cfglocs = cfgmgr.config_files_location;
   		  if cfglocs != nil and cfglocs.length > 0
   		    
-  		    # get the config xml parser
-  		    config_parser = Parser::XmlConfigParser.new();   
-  		    config_parser.data_handler = data_handler;
   		    
   		    # parse the config file 
   		    cfglocs.each do |cfgloc| 
   		      @@logger.debug("parsing config files = #{cfgloc}");
+
+            # get the config parser          
+            config_parser = Parser::ParserFactory.get_config_parser_instance(cfgloc);      
+            config_parser.data_handler = data_handler;
+
   		      cfgmgr.create_local_variables_map;
   		      config_parser.parse(cfgloc);
   		      cfgmgr.clear_local_variables_map;
   		    end #-- end of loop
   		  end #-- end if 
-  		  
+
+
   	  end #-- end if 
     end #-- end method
-  
     
   end #-- end class
 end #-- end module 

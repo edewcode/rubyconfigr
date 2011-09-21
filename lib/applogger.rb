@@ -39,7 +39,7 @@ module RubyConfigr
   	# * +logger+ - same logger reference sent as argument 
   	def self.get_log_config(logger)
   	  logger = Logger.new(STDOUT);	
-  	  logger.level = Logger::WARN;	  
+  	  logger.level = Logger::DEBUG;	  
   	  logger.formatter = proc { |severity, datetime, progname, msg|
        "#{datetime}: #{progname}: #{severity}: #{msg}\n"
       }
