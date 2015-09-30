@@ -4,7 +4,7 @@
 of application configuration. 
 
 This utlity is developed keeping developer's convenience in mind. Configurations in ruby or RoR are mostly 
-done in YAML format. Other language programmers are well aquainted with XML format and this utility helps them 
+done in YAML format. Other language programmers are well acquainted with XML format and this utility helps them 
 to easily use without learning new configuration format. 
 
 It mainly has three features 
